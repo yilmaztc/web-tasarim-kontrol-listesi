@@ -1,8 +1,8 @@
-# Web Sitesi Yayın Öncesi Kontrol Listesi
+# Web Tasarım Kontrol Listesi: Yayın Öncesi 48 Madde
 
-Yeni bir web sitesini yayına almadan önce bakılması gereken 48 maddelik Türkçe kontrol listesi. Alan adı ve DNS ayarlarından güvenlik başlıklarına, SEO temelinden KVKK yükümlülüklerine kadar her madde kısa bir açıklamayla birlikte veriliyor.
+Web tasarım projelerinde siteyi yayına almadan önce bakılması gereken 48 maddelik Türkçe kontrol listesi. Alan adı ve DNS ayarlarından güvenlik başlıklarına, SEO temelinden KVKK yükümlülüklerine kadar her madde kısa bir açıklamayla birlikte veriliyor.
 
-**Listeyi işaretleyerek kullanmak için:** https://yilmaztc.github.io/web-sitesi-kontrol-listesi/
+**Listeyi işaretleyerek kullanmak için:** https://yilmaztc.github.io/web-tasarim-kontrol-listesi/
 
 İşaretlediğiniz maddeler yalnızca kendi tarayıcınızda saklanır, hiçbir yere gönderilmez.
 
@@ -25,4 +25,4 @@ Eksik gördüğünüz bir madde ya da düzeltme öneriniz varsa bir *issue* aça
 
 İçerik [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.tr) lisansıyla paylaşılmıştır; kaynak göstererek kullanabilir ve değiştirebilirsiniz.
 
-Hazırlayan: [webtasarim.ltd](https://webtasarim.ltd/)
+Hazırlayan: [webtasarim.ltd](https://webtasarim.ltd/) · [Kurumsal web tasarım](https://webtasarim.ltd/)
