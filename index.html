@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Sitesi Yayın Öncesi Kontrol Listesi (Türkçe)</title>
+<meta name="description" content="Yeni bir web sitesini yayına almadan önce kontrol edilmesi gereken 48 madde: alan adı, HTTPS, güvenlik başlıkları, SEO, hız, mobil uyum, erişilebilirlik, KVKK ve yayın sonrası işler.">
+<link rel="canonical" href="https://yilmaztc.github.io/web-sitesi-kontrol-listesi/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Web Sitesi Yayın Öncesi Kontrol Listesi">
+<meta property="og:description" content="Yayına almadan önce kontrol edilecek 48 madde, açıklamalarıyla.">
+<meta property="og:url" content="https://yilmaztc.github.io/web-sitesi-kontrol-listesi/">
+<meta name="theme-color" content="#673de6">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Web Sitesi Yayın Öncesi Kontrol Listesi","inLanguage":"tr-TR","datePublished":"2026-10-18","dateModified":"2026-10-18","mainEntityOfPage":"https://yilmaztc.github.io/web-sitesi-kontrol-listesi/","publisher":{"@type":"Organization","name":"webtasarim.ltd","url":"https://webtasarim.ltd/"},"license":"https://creativecommons.org/licenses/by/4.0/deed.tr"}</script>
+<style>
+:root{--bg:#fafbff;--card:#fff;--text:#1d1e20;--muted:#55586a;--line:#e3e6f5;--accent:#673de6;--soft:#f4f5ff}
+@media (prefers-color-scheme:dark){:root{--bg:#14151a;--card:#1c1d24;--text:#e8e9f0;--muted:#a3a6b8;--line:#2c2e3a;--accent:#9b7dff;--soft:#22232d}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.wrap{max-width:820px;margin:0 auto;padding:48px 16px 64px}
+header h1{font-size:clamp(28px,5vw,40px);line-height:1.2;margin-bottom:12px}
+.lead{font-size:18px;color:var(--muted);margin-bottom:8px}
+.meta{font-size:14px;color:var(--muted)}
+a{color:var(--accent)}
+nav{margin:28px 0;padding:16px 20px;background:var(--soft);border-radius:10px;font-size:15px}
+nav ol{margin:8px 0 0 20px;columns:2;column-gap:32px}
+@media (max-width:560px){nav ol{columns:1}}
+section{margin-top:40px}
+h2{font-size:24px;line-height:1.3;margin-bottom:6px;scroll-margin-top:16px}
+.intro{color:var(--muted);margin-bottom:14px}
+ul.check{list-style:none}
+ul.check li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:10px}
+ul.check label{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+ul.check input{margin-top:5px;width:18px;height:18px;accent-color:var(--accent);flex-shrink:0}
+ul.check strong{display:block}
+ul.check span{display:block;color:var(--muted);font-size:15px}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--soft);padding:1px 5px;border-radius:4px}
+.progress{position:sticky;top:0;background:var(--bg);padding:10px 0;font-size:14px;color:var(--muted);border-bottom:1px solid var(--line);z-index:2}
+.bar{height:6px;background:var(--line);border-radius:3px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Web Sitesi Yayın Öncesi Kontrol Listesi</h1>
+<p class="lead">Yeni bir siteyi yayına almadan önce gözden kaçan küçük ayrıntılar, sonradan en çok vakit kaybettiren sorunlara dönüşür. Bu liste, bir siteyi teslim etmeden önce tek tek bakılan 48 maddeyi açıklamalarıyla bir araya getiriyor.</p>
+<p class="meta">Son güncelleme: 18 Ekim 2026 · Lisans: <a href="https://creativecommons.org/licenses/by/4.0/deed.tr" rel="license">CC BY 4.0</a> · Kaynak: <a href="https://github.com/yilmaztc/web-sitesi-kontrol-listesi">GitHub</a></p>
+</header>
+
+<div class="progress" aria-live="polite"><span id="say">0 / 48 madde tamam</span><div class="bar"><i id="bar"></i></div></div>
+
+<nav aria-label="İçindekiler"><strong>Bölümler</strong>
+<ol>
+<li><a href="#alan-adi">Alan adı ve DNS</a></li>
+<li><a href="#https">HTTPS ve güvenlik</a></li>
+<li><a href="#seo">Arama motoru temeli</a></li>
+<li><a href="#hiz">Hız ve performans</a></li>
+<li><a href="#mobil">Mobil ve erişilebilirlik</a></li>
+<li><a href="#icerik">İçerik ve formlar</a></li>
+<li><a href="#yasal">Yasal yükümlülükler</a></li>
+<li><a href="#yayin">Yayın sonrası ilk hafta</a></li>
+</ol></nav>
+
+<section id="alan-adi">
+<h2>1. Alan adı ve DNS</h2>
+<p class="intro">Sitenin adresiyle ilgili hatalar en geç fark edilenlerdir, çünkü geliştirici çoğu zaman tek bir adresten test eder.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>Alan adı müşterinin adına kayıtlı</strong><span>Kayıt kuruluşundaki hesap ve WHOIS sahibi işletmenin kendisi olmalı. Ajans hesabında duran bir alan adı, yollar ayrıldığında en büyük sorun olur.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Tek bir adres seçildi</strong><span><code>www</code>'li ya da <code>www</code>'siz, ama yalnızca biri. Diğer üç kombinasyon (http, https, www) tek adrese 301 ile yönlenmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Yönlendirme tek adımda bitiyor</strong><span><code>http://www.</code> adresi önce <code>https://www.</code>'e, sonra köke gidiyorsa iki adımdır. Tarayıcıda değil, <code>curl -I</code> ile kontrol edin.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>NS kayıtları doğru sunucuyu gösteriyor</strong><span>Kayıt kuruluşunda yazan ad sunucuları ile hosting firmasının alan adı için verdiği sunucular aynı olmalı. Farklıysa DNS sorguları reddedilir ve site hiç açılmaz.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>E-posta kayıtları tamam</strong><span>Alan adından e-posta gönderilecekse SPF, DKIM ve DMARC kayıtları eklenmeli. Gönderilmeyecekse <code>v=spf1 -all</code> ile kötüye kullanım engellenir.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Yenileme hatırlatması kuruldu</strong><span>Otomatik yenileme açık mı, kart geçerli mi? Süresi dolan bir alan adı, yıllarca biriken arama görünürlüğünü birkaç günde silebilir.</span></div></label></li>
+</ul>
+</section>
+
+<section id="https">
+<h2>2. HTTPS ve güvenlik</h2>
+<p class="intro">Güvenlik ayarları bir kez doğru yapılır ve yıllarca kendiliğinden çalışır; yapılmadığında ise ilk saldırıda fark edilir.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>SSL sertifikası geçerli ve otomatik yenileniyor</strong><span>Sertifikanın bitiş tarihine ve yenileme mekanizmasına bakın. Başka bir sunucudan taşınan sertifikalar çoğu zaman yenilenmez.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Karışık içerik yok</strong><span>HTTPS sayfada <code>http://</code> ile yüklenen görsel, betik ya da yazı tipi kalmamalı. Tarayıcı konsolunda uyarı olmamalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>HSTS başlığı eklendi</strong><span><code>Strict-Transport-Security</code> tarayıcıya siteyi her zaman HTTPS ile açmasını söyler. Önce kısa bir süreyle deneyin, sonra bir yıla çıkarın.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Temel güvenlik başlıkları var</strong><span><code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy</code> ve sayfanın başka sitelerde çerçeve içinde açılmasını engelleyen <code>X-Frame-Options</code> ya da <code>frame-ancestors</code>.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>İçerik Güvenlik Politikası (CSP) denendi</strong><span>Yalnızca kendi alan adınızdan betik yüklenmesine izin veren bir CSP, XSS saldırılarının büyük kısmını etkisiz bırakır. Eklenen her dış servis politikaya tek tek yazılmalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Klasör listeleme kapalı</strong><span><code>/uploads/</code> gibi bir klasör açıldığında dosya listesi görünmemeli. Apache'de <code>Options -Indexes</code> yeterlidir.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Yönetim paneli korunuyor</strong><span>Varsayılan panel adresi değiştirildi ya da giriş denemeleri sınırlandı; güçlü bir parola ve mümkünse iki adımlı doğrulama kullanılıyor.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Yedekleme çalışıyor ve geri yüklemesi denendi</strong><span>Yedeğin alınıyor olması yetmez; bir kez geri yükleyip sitenin açıldığını görmek gerekir.</span></div></label></li>
+</ul>
+</section>
+
+<section id="seo">
+<h2>3. Arama motoru temeli</h2>
+<p class="intro">Yayın günü yapılan küçük bir SEO hatası, haftalarca fark edilmeden kalabilir. En sık görüleni, geliştirme sırasında eklenen <code>noindex</code> etiketinin unutulmasıdır.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>Geliştirme engelleri kaldırıldı</strong><span><code>noindex</code> meta etiketi, <code>X-Robots-Tag</code> başlığı ve <code>robots.txt</code> içindeki <code>Disallow: /</code> satırı yayından önce temizlenmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Her sayfanın kendine ait başlığı ve açıklaması var</strong><span>Aynı <code>&lt;title&gt;</code> birden çok sayfada tekrar etmemeli. Başlık 60, açıklama 155 karakter civarında tutulmalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Sayfa başına tek H1</strong><span>Başlık sırası H1, H2, H3 şeklinde mantıklı ilerlemeli; tasarım için başlık etiketi kullanılmamalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Canonical etiketi doğru adresi gösteriyor</strong><span>Özellikle test sunucusundan kopyalanan sitelerde canonical'ın hâlâ eski adresi gösterdiği sık görülür.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Site haritası hazır</strong><span><code>sitemap.xml</code> yalnızca dizine girmesi istenen, 200 dönen ve canonical olan adresleri içermeli. <code>robots.txt</code> dosyasında konumu belirtilmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Eski adresler yönlendirildi</strong><span>Site yenileniyorsa eski sitenin tüm adresleri listelenip yeni karşılıklarına 301 ile bağlanmalı. Yoksa dış bağlantıların değeri 404 sayfalarında kaybolur.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Yapılandırılmış veri doğrulandı</strong><span>Organization, LocalBusiness, Article ya da Product gibi şemalar Google'ın Zengin Sonuçlar Testi'nden hatasız geçmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Dış bağlantılar bilinçli</strong><span>Reklam ve sponsorlu bağlantılar <code>rel="sponsored"</code>, kullanıcı içeriği <code>rel="ugc"</code> ile işaretlenmeli.</span></div></label></li>
+</ul>
+</section>
+
+<section id="hiz">
+<h2>4. Hız ve performans</h2>
+<p class="intro">Ziyaretçi bir sayfanın ne kadar hızlı açıldığını ölçmez, hisseder. Ölçümü ise mutlaka mobil ve yavaş bağlantı varsayımıyla yapın.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>PageSpeed Insights mobil puanı kabul edilebilir</strong><span>LCP 2,5 saniyenin, CLS 0,1'in altında olmalı; INP için etkileşimli öğeler gerçek telefonda denenmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Görseller doğru boyutta ve modern biçimde</strong><span>Ekranda 400 piksel görünen bir görsel 3000 piksel olarak yüklenmemeli. WebP ya da AVIF kullanılmalı, <code>width</code> ve <code>height</code> belirtilmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Ekran dışı görseller geç yükleniyor</strong><span><code>loading="lazy"</code> sayfanın altındaki görseller içindir; ilk ekrandaki büyük görsele eklenmemeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Yazı tipleri kendi sunucunuzda</strong><span>Harici yazı tipi servisleri ilk açılışı geciktirir. Kullanılan ağırlıklar <code>woff2</code> olarak sitenin kendisinden ve <code>font-display: swap</code> ile verilmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Gereksiz betikler temizlendi</strong><span>Kullanılmayan eklentiler, iki ayrı analiz aracı ve sayfanın tamamında yüklenen sohbet kutuları en sık rastlanan yüklerdir.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Önbellek ve sıkıştırma açık</strong><span>Statik dosyalar uzun süreli önbelleğe alınmalı, HTML ve CSS sıkıştırılarak (gzip ya da brotli) gönderilmeli.</span></div></label></li>
+</ul>
+</section>
+
+<section id="mobil">
+<h2>5. Mobil ve erişilebilirlik</h2>
+<p class="intro">Ziyaretçilerin çoğu siteyi telefondan görür. Erişilebilirlik ise yalnızca engelli kullanıcılar için değil, güneş altında ekrana bakan herkes içindir.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>375 piksel genişlikte yatay kaydırma yok</strong><span>Tablolar, uzun bağlantılar ve sabit genişlikli görseller en sık taşan öğelerdir.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Dokunma alanları yeterince büyük</strong><span>Düğme ve bağlantılar en az 44 piksel yüksekliğinde olmalı ve birbirine yapışık durmamalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Renk karşıtlığı yeterli</strong><span>Normal metinde en az 4,5:1 oranı aranır. Açık gri üzerine beyaz yazı tasarımda şık, okurken yorucudur.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Görsellerin alternatif metni var</strong><span>Bilgi taşıyan görsellerde <code>alt</code> içeriği anlatmalı, yalnızca süs olan görsellerde boş bırakılmalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Klavyeyle gezinilebiliyor</strong><span>Sekme tuşuyla tüm menü ve formlar dolaşılabilmeli, odaklanılan öğe görünür bir çerçeveyle belli olmalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Sayfa dili belirtilmiş</strong><span><code>&lt;html lang="tr"&gt;</code> ekran okuyucuların Türkçe telaffuz etmesini ve büyük İ / küçük ı dönüşümlerinin doğru çalışmasını sağlar.</span></div></label></li>
+</ul>
+</section>
+
+<section id="icerik">
+<h2>6. İçerik ve formlar</h2>
+<p class="intro">Tasarım bittiğinde en çok unutulan şey, sitenin gerçekten çalışıp çalışmadığını uçtan uca denemektir.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>Örnek metinler kalmadı</strong><span>"Lorem ipsum", tema demosundan gelen sahte yorumlar ve örnek telefon numaraları tek tek aranmalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Metinler özgün</strong><span>Başka sitelerden kopyalanan içerik hem güven kaybettirir hem de arama sonuçlarında geri planda kalır; kendi sitelerinizin arasında bile metin tekrar etmemeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Görsellerin kullanım hakkı var</strong><span>İnternetten indirilen görseller telif talebine yol açabilir. Lisanslı ya da kendi çektiğiniz fotoğrafları kullanın.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Formlar gerçekten e-posta gönderiyor</strong><span>Her formu canlı sitede doldurun; e-postanın gelen kutusuna düştüğünü, istenmeyen klasörüne gitmediğini görün.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Telefon ve WhatsApp bağlantıları çalışıyor</strong><span><code>tel:</code> bağlantısı ülke koduyla yazılmalı; WhatsApp bağlantısı sayfanın adını içeren hazır bir mesajla açılırsa gelen talebin hangi sayfadan geldiği anlaşılır.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>404 sayfası yol gösteriyor</strong><span>Bulunamayan sayfa gerçekten 404 kodu dönmeli ve ziyaretçiyi ana sayfaya ya da aramaya yönlendirmeli.</span></div></label></li>
+</ul>
+</section>
+
+<section id="yasal">
+<h2>7. Yasal yükümlülükler</h2>
+<p class="intro">Türkiye'de faaliyet gösteren siteler için aşağıdaki maddeler isteğe bağlı değildir. Metinleri bir hukukçuya kontrol ettirmek en doğrusudur.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>KVKK aydınlatma metni yayında</strong><span>Formla ad, telefon ya da e-posta toplanıyorsa hangi amaçla işlendiği açıkça yazılmalı ve formun yanında bağlantısı bulunmalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Çerez bildirimi gerçek seçenek sunuyor</strong><span>Analiz ve reklam çerezleri, ziyaretçi onay vermeden yüklenmemeli. "Reddet" seçeneği "Kabul et" kadar kolay bulunmalı.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>İletişim ve firma bilgileri eksiksiz</strong><span>Ticari bir site için unvan, adres ve iletişim bilgisi bulunmalı; e-ticarette mesafeli satış sözleşmesi ve iade koşulları ayrıca yer almalı.</span></div></label></li>
+</ul>
+</section>
+
+<section id="yayin">
+<h2>8. Yayın sonrası ilk hafta</h2>
+<p class="intro">Yayın günü işin bittiği gün değildir. İlk hafta yapılan kontroller, olası bir sorunu küçükken yakalamayı sağlar.</p>
+<ul class="check">
+<li><label><input type="checkbox"><div><strong>Search Console doğrulandı ve site haritası gönderildi</strong><span>Alan adı mülkü olarak DNS kaydıyla doğrulamak, tüm alt alan adlarını ve http / https sürümlerini tek yerde toplar.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Bing Web Yöneticisi Araçları eklendi</strong><span>Search Console'dan tek tıkla aktarılabilir. Bing'in dizini birçok yapay zekâ arama aracına da kaynak oluyor.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Google İşletme Profili bağlandı</strong><span>Fiziksel adresi ya da hizmet bölgesi olan işletmelerde profildeki web sitesi alanı yeni adresi göstermeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Kırık bağlantı taraması yapıldı</strong><span>Sitenin tamamı bir tarayıcıyla taranmalı; 404 dönen iç bağlantılar ve zincirleme yönlendirmeler düzeltilmeli.</span></div></label></li>
+<li><label><input type="checkbox"><div><strong>Çalışma süresi izleniyor</strong><span>Ücretsiz bir izleme servisi sitenin kapandığını sizden önce müşterinin fark etmesini önler.</span></div></label></li>
+</ul>
+</section>
+
+<footer>
+<p>Bu liste, kurumsal sitelerin teslim sürecinde kullanılan kontrol adımlarından derlendi. Teklif almadan önce sorulması gerekenleri merak ediyorsanız <a href="https://webtasarim.ltd/#makale">web sitesi yaptırmadan önce dikkat edilmesi gerekenler</a> yazısına da göz atabilirsiniz.</p>
+<p style="margin-top:10px">Hazırlayan: <a href="https://webtasarim.ltd/">webtasarim.ltd</a> · Önerilerinizi <a href="https://github.com/yilmaztc/web-sitesi-kontrol-listesi/issues">GitHub üzerinden</a> iletebilirsiniz.</p>
+</footer>
+</div>
+<script>
+(function(){var k='wskl-v1',b=document.querySelectorAll('ul.check input'),s=document.getElementById('say'),bar=document.getElementById('bar'),d={};try{d=JSON.parse(localStorage.getItem(k)||'{}')}catch(e){}
+function g(){var n=0;b.forEach(function(x){if(x.checked)n++});s.textContent=n+' / '+b.length+' madde tamam';bar.style.width=(n/b.length*100)+'%'}
+b.forEach(function(x,i){x.checked=!!d[i];x.addEventListener('change',function(){d[i]=x.checked;try{localStorage.setItem(k,JSON.stringify(d))}catch(e){}g()})});g()})();
+</script>
+</body>
+</html>
